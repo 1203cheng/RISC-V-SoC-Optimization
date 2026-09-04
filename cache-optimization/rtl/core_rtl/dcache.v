@@ -21,7 +21,10 @@
 //    Modify the code to use distributed RAM to store VALID and DIRTY bits.
 //    This modification significantly reduces the resource usage.
 //
-//  TODO: profiler, perf/associative
+//  Nov/2024, by Wei Cheng:
+//    Fixed dirty bit management to clear on write-back, reducing miss latency.
+//    Redesigned FSM to remove redundant WbToMemFinish state.
+//    Added stride-based prefetching with concurrent cache hit handling.
 // -----------------------------------------------------------------------------
 //  License information:
 //

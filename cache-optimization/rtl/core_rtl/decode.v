@@ -15,6 +15,9 @@
 //
 //  Feb/10/2022, by Che-Yu Wu:
 //    Add load-hazard detection for amo instructions.
+//
+//  Nov/2024, by Wei Cheng:
+//    Added profiler signal wiring for cache analysis.
 // -----------------------------------------------------------------------------
 //  License information:
 //

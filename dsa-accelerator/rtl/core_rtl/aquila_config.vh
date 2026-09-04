@@ -7,6 +7,11 @@
 //  Description:
 //  This is the configuration parameters for the Aquila core.
 // -----------------------------------------------------------------------------
+//  Revision information:
+//
+//  Dec/2024, by Wei Cheng:
+//    Added DSA and TCM address space configuration parameters.
+// -----------------------------------------------------------------------------
 //  License information:
 //
 //  This software is released under the BSD-3-Clause Licence,

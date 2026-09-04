@@ -19,6 +19,9 @@
 //  Mar/05/2020, by Chih-Yu Hsiang:
 //    Support for A standard extension.
 //
+//  Dec/2024, by Wei Cheng:
+//    Added profiler module for context switching and synchronization analysis.
+//
 // -----------------------------------------------------------------------------
 //  License information:
 //

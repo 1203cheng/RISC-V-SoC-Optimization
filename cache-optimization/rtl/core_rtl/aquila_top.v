@@ -19,7 +19,8 @@
 //  Mar/05/2020, by Chih-Yu Hsiang:
 //    Support for A standard extension.
 //
-//  TODO: profiler, perf/associative
+//  Nov/2024, by Wei Cheng:
+//    Added dcache_profiler and configurable cache associativity/size.
 //
 // -----------------------------------------------------------------------------
 //  License information:

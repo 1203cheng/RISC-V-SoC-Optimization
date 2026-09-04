@@ -19,6 +19,9 @@
 //  Sep/12/2022, by Chun-Jen Tsai:
 //    Fix an issue of missing reset signal across clock domains.
 //    Use the clock wizard to generate the Aquila clock on Arty.
+//
+//  Dec/2024, by Wei Cheng:
+//    Integrated DSA module and TCM for CNN acceleration.
 // -----------------------------------------------------------------------------
 //  License information:
 //

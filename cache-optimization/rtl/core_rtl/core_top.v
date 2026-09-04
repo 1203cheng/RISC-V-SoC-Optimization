@@ -42,7 +42,9 @@
 //    style of the other stages. Also, changes the naming convention of the
 //    inter-stage signals to make them more readable.
 //
-//  TODO:
+//  Nov/2024, by Wei Cheng:
+//    Integrated dcache_profiler module for cache performance analysis.
+//
 // -----------------------------------------------------------------------------
 //  License information:
 //

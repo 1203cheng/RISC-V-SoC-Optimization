@@ -6,7 +6,11 @@
 // -----------------------------------------------------------------------------
 //  Description:
 //  This is the configuration parameters for the Aquila core.
-//  TODO: Revision info: profiler, perf/associative
+// -----------------------------------------------------------------------------
+//  Revision information:
+//
+//  Nov/2024, by Wei Cheng:
+//    Added configurable cache size and associativity parameters.
 // -----------------------------------------------------------------------------
 //  License information:
 //

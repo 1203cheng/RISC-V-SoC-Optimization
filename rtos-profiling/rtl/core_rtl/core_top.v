@@ -42,6 +42,9 @@
 //    style of the other stages. Also, changes the naming convention of the
 //    inter-stage signals to make them more readable.
 //
+//  Dec/2024, by Wei Cheng:
+//    Integrated hardware profiler for RTOS context switching analysis.
+//
 // -----------------------------------------------------------------------------
 //  License information:
 //

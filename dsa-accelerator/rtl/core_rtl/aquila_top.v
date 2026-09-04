@@ -19,6 +19,9 @@
 //  Mar/05/2020, by Chih-Yu Hsiang:
 //    Support for A standard extension.
 //
+//  Dec/2024, by Wei Cheng:
+//    Added DSA and TCM module instantiation and memory-mapped I/O wiring.
+//
 // -----------------------------------------------------------------------------
 //  License information:
 //
