@@ -1,0 +1,34 @@
+# Vivado
+*.bit
+*.ltx
+*.xpr
+*.jou
+*.log
+*.backup.jou
+*.backup.log
+*.str
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+
+# Build artifacts
+*.elf
+*.objdump
+*.map
+*.o
+*.d
+
+# Data files
+*.ods
+*.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*~
