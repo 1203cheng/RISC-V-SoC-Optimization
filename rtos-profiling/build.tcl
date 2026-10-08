@@ -38,37 +38,37 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set 'sources_1' fileset object
 # Import local design files
 set files [list \
- [file normalize "$origin_dir/src/core_rtl/alu.v" ]\
- [file normalize "$origin_dir/src/core_rtl/aquila_config.vh" ]\
- [file normalize "$origin_dir/src/core_rtl/aquila_top.v" ]\
- [file normalize "$origin_dir/src/core_rtl/atomic_unit.v" ]\
- [file normalize "$origin_dir/src/core_rtl/bcu.v" ]\
- [file normalize "$origin_dir/src/core_rtl/bpu.v" ]\
- [file normalize "$origin_dir/src/core_rtl/clint.v" ]\
- [file normalize "$origin_dir/src/core_rtl/core_top.v" ]\
- [file normalize "$origin_dir/src/core_rtl/csr_file.v" ]\
- [file normalize "$origin_dir/src/core_rtl/dcache.v" ]\
- [file normalize "$origin_dir/src/core_rtl/decode.v" ]\
- [file normalize "$origin_dir/src/core_rtl/distri_ram.v" ]\
- [file normalize "$origin_dir/src/core_rtl/execute.v" ]\
- [file normalize "$origin_dir/src/core_rtl/fetch.v" ]\
- [file normalize "$origin_dir/src/core_rtl/forwarding_unit.v" ]\
- [file normalize "$origin_dir/src/core_rtl/icache.v" ]\
- [file normalize "$origin_dir/src/core_rtl/memory.v" ]\
- [file normalize "$origin_dir/src/core_rtl/muldiv.v" ]\
- [file normalize "$origin_dir/src/core_rtl/pipeline_control.v" ]\
- [file normalize "$origin_dir/src/core_rtl/profiler.v" ]\
- [file normalize "$origin_dir/src/core_rtl/program_counter.v" ]\
- [file normalize "$origin_dir/src/core_rtl/reg_file.v" ]\
- [file normalize "$origin_dir/src/core_rtl/sram.v" ]\
- [file normalize "$origin_dir/src/core_rtl/sram_dp.v" ]\
- [file normalize "$origin_dir/src/core_rtl/writeback.v" ]\
- [file normalize "$origin_dir/src/soc_rtl/uart.v" ]\
- [file normalize "$origin_dir/src/soc_rtl/soc_top.v" ]\
- [file normalize "$origin_dir/src/soc_rtl/core2axi_if.v"]\
- [file normalize "$origin_dir/src/soc_rtl/cdc_sync.v" ]\
- [file normalize "$origin_dir/src/soc_rtl/mem_arbiter.v" ]\
- [file normalize "$origin_dir/src/mem/uartboot.mem" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/alu.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/aquila_config.vh" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/aquila_top.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/atomic_unit.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/bcu.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/bpu.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/clint.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/core_top.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/csr_file.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/dcache.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/decode.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/distri_ram.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/execute.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/fetch.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/forwarding_unit.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/icache.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/memory.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/muldiv.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/pipeline_control.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/profiler.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/program_counter.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/reg_file.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/sram.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/sram_dp.v" ]\
+ [file normalize "$origin_dir/rtl/core_rtl/writeback.v" ]\
+ [file normalize "$origin_dir/rtl/soc_rtl/uart.v" ]\
+ [file normalize "$origin_dir/rtl/soc_rtl/soc_top.v" ]\
+ [file normalize "$origin_dir/rtl/soc_rtl/core2axi_if.v"]\
+ [file normalize "$origin_dir/rtl/soc_rtl/cdc_sync.v" ]\
+ [file normalize "$origin_dir/rtl/soc_rtl/mem_arbiter.v" ]\
+ [file normalize "$origin_dir/rtl/mem/uartboot.mem" ]\
 ]
 set imported_files [import_files -fileset sources_1 $files]
 
@@ -90,7 +90,7 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 # Set 'constrs_1' fileset properties for local files
 # Import constraint files and set file properties
 set files [list \
-  [file normalize "$origin_dir/src/xdc/arty.xdc"]\
+  [file normalize "$origin_dir/rtl/xdc/arty.xdc"]\
 ]
 set imported_files [import_files -fileset constrs_1 $files]
 set files "*.xdc"
@@ -105,8 +105,8 @@ if {[string equal [get_filesets -quiet sim_1] ""]} {
 # Set 'sim_1' fileset object
 # Import local simulation files
 set files [list \
- [file normalize "$origin_dir/src/soc_rtl/soc_tb.v" ]\
- [file normalize "$origin_dir/src/soc_rtl/mig_7series_sim.v" ]\
+ [file normalize "$origin_dir/rtl/soc_rtl/soc_tb.v" ]\
+ [file normalize "$origin_dir/rtl/soc_rtl/mig_7series_sim.v" ]\
 ]
 set imported_files [import_files -fileset sim_1 $files]
 
@@ -179,7 +179,7 @@ generate_target all [get_files ${proj_name}/${proj_name}.srcs/sources_1/ip/axi_q
 
 # Adding an MIG IP
 create_ip -name mig_7series -vendor xilinx.com -library ip -module_name mig_7series_0
-file copy $origin_dir/src/mig/mig-arty100t.prj ${proj_name}/${proj_name}.srcs/sources_1/ip/mig_7series_0/mig.prj
+file copy $origin_dir/rtl/mig/mig-arty100t.prj ${proj_name}/${proj_name}.srcs/sources_1/ip/mig_7series_0/mig.prj
 set_property -dict [list CONFIG.XML_INPUT_FILE {mig.prj}] [get_ips mig_7series_0]
 generate_target {instantiation_template} [get_files ${proj_name}/${proj_name}.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci]
 generate_target all [get_files ${proj_name}/${proj_name}.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci]
