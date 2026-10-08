@@ -8,7 +8,7 @@ A small CNN for handwritten character recognition (OCR) ran entirely in software
 
 ## Approach
 
-1. **DSA** — a fused multiply-add unit (`A × B + C`) built around the Xilinx Floating-Point IP and accessed through memory-mapped registers. The result is fed back as the next `C`, so a whole dot product runs on the accelerator without the processor reading back intermediate sums.
+1. **DSA** — a fused multiply-add unit ($A \times B + C$) built around the Xilinx Floating-Point IP and accessed through memory-mapped registers. The result is fed back as the next $C$, so a whole dot product runs on the accelerator without the processor reading back intermediate sums.
 2. **TCM** — 128 KB of on-chip block RAM mapped into the device address space, used for CNN weights and feature maps so they bypass the cache and external DRAM.
 3. **Software** — the CNN code uses the DSA for dot products, allocates its buffers in the TCM, and hard-codes padding (0) and stride (1) in the convolution loops.
 4. **Profiler** — counters inside the DSA split its busy time into *data feeding* and *computing*, to show where the remaining bottleneck is.
@@ -53,7 +53,7 @@ The DSA occupies four 32-bit registers:
 | `0xC400_0008` | C | write initial value / read result |
 | `0xC400_000C` | Control | write to reset or start computing |
 
-Internally, A, B, and C drive the three AXI4-Stream inputs of the floating-point FMA unit. When a result comes out, it is written back into C, so each new pair of operands computes `A × B + (previous result)`. A dot product in software therefore looks like this:
+Internally, A, B, and C drive the three AXI4-Stream inputs of the floating-point FMA unit. When a result comes out, it is written back into C, so each new pair of operands computes $A \times B + (\text{previous result})$. A dot product in software therefore looks like this:
 
 ```c
 SET_DSA(0.);                          // clear the control register, C = 0

@@ -60,7 +60,7 @@ The baseline went `WbtoMem → WbtoMemFinish → RdfromMem` on a dirty miss. The
 
 ### LRU Replacement
 
-Each set has an N×N bit matrix (N = number of ways). When way *k* is accessed, row *k* is set to all 1s and column *k* to all 0s. The least recently used way is the row that contains only 0s. FIFO or LRU is chosen with a macro in `aquila_config.vh`.
+Each set has an $N \times N$ bit matrix ($N$ = number of ways). When way $k$ is accessed, row $k$ is set to all 1s and column $k$ to all 0s. The least recently used way is the row that contains only 0s. FIFO or LRU is chosen with a macro in `aquila_config.vh`.
 
 ### Stride Prefetching
 
